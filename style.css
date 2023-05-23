@@ -56,6 +56,7 @@ body{
     color:black;
     border-radius: 12px;
     height:auto;
+    position:relative;
 }
 .item>title{
     font-size: 0.8rem;
@@ -65,11 +66,37 @@ body{
     font-size: 0.7rem;
     overflow:hidden
 }
+.item>.icons{
+    display:flex;
+    background-color: transparent;
+    position:absolute;
+    bottom: 10px;
+    right:10px;
+   
+    min-height:30px;
+    min-width:120px;
+    max-width: 10%;
+    max-height: 5%;
+    
+    justify-content: center;
+    
+}
+.icons>img{
+    flex:1;
+    max-height:25px;
+    max-width: 33%;
+    filter: invert(19%) sepia(44%) saturate(6086%) hue-rotate(259deg) brightness(92%) contrast(101%);
+    transition: background-color 0.3s ease;
+}
+.icons>img:not([alt="delete"]):hover{
+    
 
+filter: invert(75%) sepia(37%) saturate(555%) hue-rotate(119deg) brightness(102%) contrast(90%);
+}
 
-
-
-
+.icons>img[alt="delete"]:hover{
+    filter: invert(11%) sepia(74%) saturate(6105%) hue-rotate(358deg) brightness(119%) contrast(117%);
+}
 
 
 
